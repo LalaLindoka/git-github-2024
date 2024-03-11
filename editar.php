@@ -6,7 +6,7 @@ include ("conecta.php");
 
 $sql = "UPDATE git SET email = '$email' senha = '$senha' ";//continuar
 
-if(mysql_query($conexo, $sql)){
+if(mysqli_query($conexo, $sql)){
     echo "Arquivo enviado com sucesso";
     header('Location: index.php');
 }else{
