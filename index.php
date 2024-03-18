@@ -14,14 +14,14 @@
     include("conecta.php");
 
     $sql = "SELECT * FROM git";
-    //executa o select
+
     $resultado = mysqli_query($conexao, $sql);
 
-    //lista os itens
+
     echo '<table>
     <tr>
     <strong>
-      <th scope="col">Id</th>
+      <th scope="col">ID_usuario</th>
       <th scope="col">Email</th>
       <th scope="col">Senha</th>
       <th scope="col">Opções</th>
@@ -32,8 +32,8 @@
         echo "<td> " . $dados['id_usuario'] . " </td>";
         echo "<td> " . $dados['email'] . "</td>";
         echo "<td> " . $dados['senha'] . "</td>";
-        echo "<td><a href='editarform.php?email=" . $dados['email'] . "&senha=" . $dados['senha'] . "'>" . "editar" . "</a>";
-        echo " <a href='excluir.php?id_usuario=" . $dados['id_usuario'] . "'>" . "excluir" . "</a></td>";
+        echo "<td><a href='editarForm.php?id_usuario=" . $dados['id_usuario'] ."&email=" . $dados['email'] . "&senha=" . $dados['senha'] . "'>" . "Editar" . "</a>";
+        echo " <a href='excluir.php?id_usuario=" . $dados['id_usuario'] . "'>" . "Exluir" . "</a></td>";
         echo '</tr>';
     }
     echo '</table>';
